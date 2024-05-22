@@ -39,7 +39,8 @@ def main(model: str, english: bool, verbose: bool, energy:  int, pause: float, d
                 mic.file.close()
     else:
         try:
-            mic.listen_loop(dictate=dictate,phrase_time_limit=2)
+            # Note: This seems to have a greater effect on allowed speech time.
+            mic.listen_loop(dictate=dictate,phrase_time_limit=3)
         except KeyboardInterrupt:
             print("Operation interrupted successfully")
         finally:
