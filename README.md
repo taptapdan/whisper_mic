@@ -18,6 +18,16 @@ Now a pip package!
 1. Create a venv of your choice.
 2. Run ```pip install whisper-mic```
 
+## Setup w/ Repo Files
+
+```
+pyenv install 3.9
+pyenv global 3.9
+brew install portaudio
+pip install -r requirements.txt
+python -m whisper_mic.cli --model tiny --english --loop
+```
+
 ## Available models and languages
 
 There are five model sizes, four with English-only versions, offering speed and accuracy tradeoffs. Below are the names of the available models and their approximate memory requirements and relative speed. 
@@ -62,6 +72,9 @@ Check out what the possible arguments are by looking at the ```cli.py``` file
 If you are having issues, try the following:
 ```
 sudo apt install portaudio19-dev python3-pyaudio
+
+# Mac
+brew install portaudio
 ```
 
 ## Contributing
